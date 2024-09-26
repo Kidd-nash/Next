@@ -1,0 +1,10 @@
+services:
+  yarn:
+    container_name: yarn_lab #optional
+    image: node:22-alpine3.19
+    ports:
+      - "3000:3000"
+    working_dir: /builds # optional
+    volumes:
+      - ./:/builds
+    command: "tail -f /dev/null"
